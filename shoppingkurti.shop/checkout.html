@@ -606,8 +606,8 @@ function payNow(payType, amount, orderId) {
             return;
     }
     
-    // Open payment link in new tab
-    window.open(redirect_url, '_blank');
+    // Directly open UPI app with prefilled amount
+    window.location.href = redirect_url;
 }
 
 // Close loader button
