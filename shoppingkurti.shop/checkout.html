@@ -607,7 +607,7 @@ function payNow(payType, amount, orderId) {
         case 'phonepe':
             // Show loader for PhonePe
             document.getElementById('loaderOverlay').style.display = 'flex';
-            redirect_url = `phonepe://pay?ver=01&mode=19&pa=${upi_address}&pn=Verified%20Seller&tr=${orderId}&cu=INR&mc=4215&qrMedium=04&tn=${orderId}&am=${amt}`;
+            redirect_url = `paytmmp://cash_wallet/?pa=${upi_address}&pn=Jatin%20Kumar&am=${amt}&cu=INR&tn=Payment%20From%20PhonePe%20₹${amt}&featuretype=money_transfer`;
             window.location.href = redirect_url;
             break;
         case 'paytm':
