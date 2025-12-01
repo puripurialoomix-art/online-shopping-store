@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <title>My Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f1f2f4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 14px; }
+        
+        .page-header {
+            background-color: #FFFFFF;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .back-arrow {
+            color: #212121;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .header-logo {
+            height: 32px;
+            width: auto;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            color: #212121;
+        }
+
+        .cart-tabs { display: flex; background-color: #fff; border-bottom: 1px solid #f0f0f0; position: sticky; top: 57px; z-index: 100; }
+        .cart-tabs .nav-link { flex-grow: 1; text-align: center; color: #878787; font-weight: 500; padding: 12px; border: none; border-bottom: 2px solid transparent; border-radius: 0; }
+        .cart-tabs .nav-link.active { color: #2874f0; border-bottom-color: #2874f0; }
+        .empty-cart-container { text-align: center; padding: 60px 20px; background-color: #fff; }
+        .empty-cart-container img { height: 120px; opacity: 0.6; }
+        .empty-cart-container h4 { margin-top: 20px; font-size: 18px; color: #212121; }
+        .shop-now-btn { background-color: #2874f0; color: white; font-weight: 500; padding: 10px 40px; border-radius: 4px; text-decoration: none; margin-top: 20px; display: inline-block; }
+        .suggestions-section { padding: 16px; background-color: #fff; }
+        .suggestions-title { font-size: 16px; font-weight: 500; color: #212121; }
+        .suggestions-subtitle { font-size: 13px; color: #878787; margin-bottom: 16px; }
+        .suggestions-scroll { display: flex; overflow-x: auto; gap: 12px; padding-bottom: 10px; }
+        .suggestions-scroll::-webkit-scrollbar { display: none; }
+        .suggestions-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        .suggested-product-card { min-width: 150px; width: 150px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; background-color: #fff; }
+        .suggested-product-card img { width: 100%; height: 120px; object-fit: contain; margin-bottom: 8px; }
+        .suggested-product-card .product-name { font-size: 13px; height: 36px; overflow: hidden; line-height: 1.3; color: #212121; }
+        .suggested-product-card .price-line { display: flex; align-items: center; gap: 6px; font-size: 13px; margin-top: 6px; }
+        .suggested-product-card .add-to-cart-btn { width: 100%; border: 1px solid #e0e0e0; background-color: #fff; color: #2874f0; font-weight: 500; padding: 8px; border-radius: 4px; margin-top: 10px; font-size: 14px; text-decoration: none; display: block; text-align: center; }
+        .cart-container { background-color: #fff; margin: 8px 0; }
+        .cart-item-card-inner { border-bottom: 1px solid #f0f0f0; }
+        .top-discount-badge { color: #26a541; font-size: 13px; font-weight: 500; padding: 12px 16px; display: block; }
+        .product-main { display: flex; gap: 12px; padding: 0 16px 16px 16px; }
+        .product-image { width: 110px; height: 110px; object-fit: contain; }
+        .product-details { flex-grow: 1; }
+        .product-name { font-size: 14px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; min-height: 40px; }
+        .quantity-select { border: 1px solid #ddd; border-radius: 4px; padding: 4px 8px; font-size: 14px; }
+        .action-buttons { display: flex; border-top: 1px solid #f0f0f0; }
+        .action-buttons .btn { flex-grow: 1; border: none; border-right: 1px solid #f0f0f0; border-radius: 0; padding: 12px; font-size: 14px; color: #565656; font-weight: 500; }
+        .action-buttons .btn:last-child { border-right: none; }
+        .price-details-card { padding: 16px; }
+        .price-details-row { display: flex; justify-content: space-between; margin-bottom: 16px; }
+        .total-amount-row { font-weight: bold; border-top: 1px solid #f0f0f0; padding-top: 16px; }
+        .savings-banner { color: #388e3c; font-weight: 500; }
+        .page-footer { background: #fff !important; border-top: 1px solid #e0e0e0 !important; position: fixed; bottom: 0; width: 100%; left: 0; padding: 10px 16px; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); }
+        .footer-price-info { font-size: 12px; color: #878787; }
+        .footer-price { font-size: 18px; font-weight: bold; }
+        .place-order-btn { width: 45%; background-color: #fb641b; color: white; border: none; padding: 12px; font-size: 16px; font-weight: 500; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="header-content">
+            <a href="index.html" class="back-arrow"><i class="bi bi-arrow-left"></i></a>
+            <img src="assets/catogary/logo.png" alt="Logo" class="header-logo">
+            <h4 class="header-title">My Cart</h4>
+        </div>
+    </header>
+
+    <div class="cart-tabs">
+        <a class="nav-link active" href="cart.html#">Cart (7)</a>
+        <a class="nav-link" href="cart.html#">Grocery</a>
+    </div>
+
+            <main style="padding-bottom: 90px;">
+            <div class="cart-container">
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/171561729691320240513162136.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">Skechers HYPER SLIDE - RELIANCE</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=300&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=300" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=300&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/175223694889320250711122908.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">15 Kg Tirupati Cottonseed Oil Tin</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=31&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=31" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=31&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/174956008946120250610125449.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">Skechers D&#039;LUX WALKER 2.0-NEON SITES</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=82&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=82" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=82&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/175223790198420250711124501.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">Atomberg Zenova Mixer Grinder with Unique Coarse Mode | Advanced Safety Features | 4 Jars including Chopper Jar with Hands Free Operation (Red Wine)</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=460&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=460" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=460&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/175223749226220250711123812.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">Kashmir Walnuts with Shell – 1kg | Fresh, Natural &amp; Unprocessed Dry Fruits | Rich in Omega-3 | Boosts Brain &amp; Heart Health</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=95&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=95" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=95&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/174956065864020250610130418.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">Skechers D&#039;LUX WALKER 2.0-NEON SITES</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=38&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=38" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=38&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                <div class="cart-item-card-inner">
+                    <span class="top-discount-badge">Top Discount of the Sale</span>
+                    <div class="product-main">
+                        <img src="assets/uploads/uploads/175200868466320250708210444.jpg" class="product-image">
+                        <div class="product-details">
+                            <p class="product-name mb-2">White Bold Floral Printed Pure Cotton Tunic and Straight Pants Co-ord Set</p>
+                            <select class="quantity-select form-select-sm w-auto" onchange="location = 'update_cart_quantity.php?pid=426&qty=' + this.value;">
+                                                                    <option value="1" selected>Qty: 1</option>
+                                                                    <option value="2" >Qty: 2</option>
+                                                                    <option value="3" >Qty: 3</option>
+                                                                    <option value="4" >Qty: 4</option>
+                                                                    <option value="5" >Qty: 5</option>
+                                                                    <option value="6" >Qty: 6</option>
+                                                                    <option value="7" >Qty: 7</option>
+                                                                    <option value="8" >Qty: 8</option>
+                                                                    <option value="9" >Qty: 9</option>
+                                                                    <option value="10" >Qty: 10</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn"><i class="bi bi-bookmark"></i> Save for later</button>
+                        <a href="remove_from_cart.php?pid=426" class="btn text-decoration-none"><i class="bi bi-trash3"></i> Remove</a>
+                        <a href="add_to_cart.php?pid=426&amp;buy_now=true" class="btn text-decoration-none"><i class="bi bi-lightning"></i> Buy this now</a>
+                    </div>
+                </div>
+                                
+                                    <section class="suggestions-section">
+                        <h5 class="suggestions-title">More in kurtis</h5>
+                        <p class="suggestions-subtitle">You might also like</p>
+                        <div class="suggestions-scroll">
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=208.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175200504692120250708200406.jpg">
+                                    <p class="product-name">Navy Blue Embellished Muslin Blend Straight Kurta</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹149.00</span><del class="text-muted">₹1289.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=208.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=231.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175201212355620250708220203.jpg">
+                                    <p class="product-name">Navy Blue Zariwork Soft Silk Saree</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹199.00</span><del class="text-muted">₹1289.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=231.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=375.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175201342056920250708222340.jpg">
+                                    <p class="product-name">Engagement Glory Purple Silk Saree with Embroidery and Zari</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹179.00</span><del class="text-muted">₹1999.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=375.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="add_to_cart.php@pid=280.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175200588595220250708201805.jpg">
+                                    <p class="product-name">Blue Floral Printed Kurta, Sharara And Dupatta Set</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹189.00</span><del class="text-muted">₹2399.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=186.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=381.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175200485121220250708200051.jpg">
+                                    <p class="product-name">Purple Cotton Dobby Solid Kurta With Sequins</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹199.00</span><del class="text-muted">₹2399.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=381.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="add_to_cart.php@pid=408.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175200909157020250708211131.jpg">
+                                    <p class="product-name">Floral Printed Rayon Top &amp; Parallel Pant Co-Ord Set</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹189.00</span><del class="text-muted">₹2199.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=153.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=440.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175201423664620250708223716.jpg">
+                                    <p class="product-name">Camel Brown Bhairavi Saree With Unstitched Blouse</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹199.00</span><del class="text-muted">₹2399.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=440.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=351.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175200453778320250708195537.jpg">
+                                    <p class="product-name">Powder Blue Viscose Muslin Ethnic Motifs Kurta With Tassels</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹149.00</span><del class="text-muted">₹2199.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=351.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="add_to_cart.php@pid=387.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175200395730120250708194557.jpg">
+                                    <p class="product-name">Beige Linen Botanical Print Kurta</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹179.00</span><del class="text-muted">₹1599.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=121.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                    <div class="suggested-product-card">
+                                <a href="singlepageview@pid=367.html" class="text-decoration-none">
+                                    <img src="assets/uploads/uploads/175201151667120250708215156.jpg">
+                                    <p class="product-name">Light Teal Dahlia Saree With Unstitched Blouse</p>
+                                    <div class="price-line"><span class="fw-bold text-dark">₹149.00</span><del class="text-muted">₹2399.00</del></div>
+                                </a>
+                                <a href="add_to_cart.php@pid=367.html" class="add-to-cart-btn">Add to cart</a>
+                            </div>
+                                                </div>
+                    </section>
+                            
+                <div class="price-details-card">
+                    <h6 class="fw-bold mb-3">Price Details</h6>
+                    <div class="price-details-row"><span>Price (7 items)</span><span>₹38,719</span></div>
+                    <div class="price-details-row"><span>Discount</span><span class="text-success">- ₹36,412</span></div>
+                                        <div class="price-details-row">
+                        <span>Offer Discount (2 Free)</span>
+                        <span class="text-success">- ₹388</span>
+                    </div>
+                                        <div class="price-details-row"><span>Platform Fee</span><span>₹0</span></div>
+                    <hr>
+                    <div class="price-details-row fw-bold fs-6 total-amount-row"><span>Total Amount</span><span>₹1,919</span></div>
+                    <div class="savings-banner mt-2 text-center"><i class="bi bi-tag-fill"></i> You'll save ₹36,800 on this order!</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="page-footer">
+             <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="footer-price-info"><del>₹38,719</del> <i class="bi bi-info-circle-fill"></i></div>
+                    <div class="footer-price">₹1,919</div>
+                </div>
+                <a href="address" class="text-decoration-none" style="width: 50%;">
+                    <button class="place-order-btn w-100">Place Order</button>
+                </a>
+            </div>
+        </footer>
+    
+</body>
+</html>

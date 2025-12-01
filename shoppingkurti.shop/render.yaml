@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: shoppingkurti-clone
+    env: static
+    buildCommand: echo "No build required"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
+    routes:
+      - type: rewrite
+        source: /singlepageview.php
+        destination: /singlepageview@pid=:id.html
+      - type: rewrite
+        source: /category.php
+        destination: /category@cid=:id.html

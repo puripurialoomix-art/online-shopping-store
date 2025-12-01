@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fix Links & Clear Cache</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .btn {
+            background: #2874f0;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn:hover {
+            background: #1e5bb8;
+        }
+        .success {
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Fix Website Links</h1>
+    <p>Agar products click karne pe dusri website khul rahi hai, toh yeh steps follow karo:</p>
+    
+    <button class="btn" onclick="clearEverything()">Clear All Cache & Data</button>
+    <button class="btn" onclick="unregisterServiceWorkers()">Remove Service Workers</button>
+    
+    <div id="message"></div>
+
+    <script>
+        function clearEverything() {
+            // Clear localStorage
+            localStorage.clear();
+            
+            // Clear sessionStorage
+            sessionStorage.clear();
+            
+            // Clear cookies
+            document.cookie.split(";").forEach(function(c) { 
+                document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+            });
+            
+            // Clear cache
+            if ('caches' in window) {
+                caches.keys().then(function(names) {
+                    for (let name of names) caches.delete(name);
+                });
+            }
+            
+            document.getElementById('message').innerHTML = '<p class="success">✅ Cache cleared! Ab browser ko hard refresh karo (Ctrl + Shift + R)</p>';
+        }
+        
+        function unregisterServiceWorkers() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for(let registration of registrations) {
+                        registration.unregister();
+                    }
+                    document.getElementById('message').innerHTML = '<p class="success">✅ Service workers removed! Page reload ho raha hai...</p>';
+                    setTimeout(() => window.location.reload(true), 2000);
+                });
+            } else {
+                document.getElementById('message').innerHTML = '<p class="success">✅ No service workers found!</p>';
+            }
+        }
+    </script>
+
+    <hr style="margin: 40px 0;">
+    
+    <h2>Manual Steps:</h2>
+    <ol style="text-align: left;">
+        <li><strong>Hard Refresh:</strong> Ctrl + Shift + R (Windows) ya Cmd + Shift + R (Mac)</li>
+        <li><strong>Clear Browser Cache:</strong> Ctrl + Shift + Delete → Clear browsing data</li>
+        <li><strong>Incognito Mode:</strong> Ctrl + Shift + N mein test karo</li>
+        <li><strong>Check URL:</strong> Address bar mein "shoppingkurti.shop" nahi hona chahiye</li>
+    </ol>
+
+    <hr style="margin: 40px 0;">
+    
+    <a href="index.html" class="btn">Go to Homepage</a>
+</body>
+</html>

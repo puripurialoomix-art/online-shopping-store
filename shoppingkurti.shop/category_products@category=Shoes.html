@@ -1,0 +1,1834 @@
+﻿<!DOCTYPE html>
+<html lang="gu-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes - પ્રોડક્ટ્સ | YourStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f1f2f4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+        
+        .page-header {
+            background-color: #FFFFFF;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+        }
+        /* -- START: CHANGED CSS -- */
+        .header-left-section {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* એરો, લોગો અને શીર્ષક વચ્ચે જગ્યા */
+        }
+        .back-arrow {
+            color: #212121;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .header-logo {
+            height: 32px;
+            width: auto;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            color: #212121;
+            white-space: nowrap;
+        }
+        /* -- END: CHANGED CSS (header-center દૂર કર્યું છે) -- */
+        .header-cart a {
+            color: #212121;
+            text-decoration: none;
+            position: relative;
+            font-size: 24px;
+        }
+        .header-cart .badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            font-size: 10px;
+        }
+
+        .products-section { background-color: #f1f2f4; padding-top: 6px; }
+        .mainbody { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: #e0e0e0; }
+        .products { background: white; text-decoration: none; color: black; }
+        .productcard { padding: 10px; display: flex; flex-direction: column; height: 100%; }
+        .imagecontainer { text-align: center; }
+        .productimage { width: 100%; height: 150px; object-fit: contain; }
+        .product-info { padding-top: 10px; }
+        .product-name { font-size: 14px; color: #212121; line-height: 1.4; height: 40px; overflow: hidden; margin-bottom: 8px; }
+        .price-line { display: flex; align-items: center; flex-wrap: wrap; }
+        .selling-price { font-size: 16px; font-weight: 500; color: #212121; }
+        .mrp { text-decoration: line-through; color: #878787; font-size: 12px; margin: 0 8px; }
+        .discount { font-size: 13px; color: #388e3c; font-weight: 500; display: flex; align-items: center;}
+        .discount-arrow { margin-left: 2px; }
+        .wow-offer { margin-top: 4px; display: flex; align-items: center; }
+        .wow-badge { height: 18px; margin-right: 6px; }
+        .wow-price { font-size: 14px; font-weight: 500; color: #212121; }
+        .offer-text { font-size: 12px; color: #878787; margin-left: 6px; }
+        .rating-line { display: flex; align-items: center; margin-top: 6px; }
+        .rating-stars { font-size: 14px; color: #26a541; }
+        .rating-stars .bi-star { color: #e0e0e0; }
+        .fassured-logo-small { height: 16px; margin-left: 10px; }
+        .site-footer { background-color: #172337; color: #fff; font-size: 12px; padding: 40px 15px 0; line-height: 1.5; text-align: left; }
+        .footer-main-container { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px; }
+        .footer-column h4 { color: #878787; font-size: 12px; font-weight: 500; margin-bottom: 12px; text-transform: uppercase; }
+        .footer-column ul { list-style: none; padding: 0; margin: 0; }
+        .footer-column ul li { margin-bottom: 9px; }
+        .footer-column ul li a { color: #fff; text-decoration: none; }
+        .footer-bottom-bar { border-top: 1px solid #454d5e; padding: 25px 0; margin-top: 20px; font-size: 13px; }
+        .bottom-bar-container { display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 15px 20px; }
+        .bottom-bar-link { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <!-- START: CHANGED HTML -->
+        <div class="header-left-section">
+            <!-- ફેરફાર 1: આ લિંક હવે JavaScript વડે પાછળ જશે -->
+            <a href="category_products@category=Shoes.html#" onclick="history.back(); return false;" class="back-arrow"><i class="bi bi-arrow-left"></i></a>
+            
+            <!-- ફેરફાર 2: લોગો અને ટાઇટલને સેન્ટરમાંથી અહીં ખસેડવામાં આવ્યા છે -->
+            <img src="assets/catogary/logo.png" alt="Logo" class="header-logo">
+            <h1 class="header-title">Shoes</h1>
+        </div>
+        <!-- END: CHANGED HTML -->
+        
+        <div class="header-cart">
+            <a href="cart.html">
+                <i class="bi bi-cart3"></i>
+                            </a>
+        </div>
+    </header>
+    
+    <main class="products-section">
+        <div class="mainbody">
+                            <a href="add_to_cart.php@pid=269.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955680540420250610120005.jpg" class="productimage" alt="Skechers CORDOVA CLASSIC" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers CORDOVA CLASSIC</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=40.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955509664120250610113136.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=108.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956056322720250610130243.jpg" class="productimage" alt="Skechers GO WALK ARCH FIT 2.0 - IDYLLI" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO WALK ARCH FIT 2.0 - IDYLLI</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,499</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=39.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956065864020250610130418.jpg" class="productimage" alt="Skechers D&#039;LUX WALKER 2.0-NEON SITES" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers D&#039;LUX WALKER 2.0-NEON SITES</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=3.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956208647620250610132806.jpg" class="productimage" alt="Skechers GO RUN RIDE 11" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN RIDE 11</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=406.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955350780020250610110507.jpg" class="productimage" alt="Skechers GO WALK Max Cushioning Arch Fit - Haptic" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO WALK Max Cushioning Arch Fit - Haptic</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹8,199</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=85.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955365290220250610110732.jpg" class="productimage" alt="Skechers Aero Tempo" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Tempo</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=453.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955454725420250610112227.jpg" class="productimage" alt="Skechers Slip-ins Relaxed Fit: Arch Fit Garza - Langston" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins Relaxed Fit: Arch Fit Garza - Langston</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹8,199</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=181.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955892191520250610123521.jpg" class="productimage" alt="Skechers TRES-AIR UNO - AH - MAZING" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers TRES-AIR UNO - AH - MAZING</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=342.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956008946120250610125449.jpg" class="productimage" alt="Skechers D&#039;LUX WALKER 2.0-NEON SITES" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers D&#039;LUX WALKER 2.0-NEON SITES</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=235.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955730123620250610120821.jpg" class="productimage" alt="Skechers ARCH FIT 2.0 - BIG LEAGUE" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers ARCH FIT 2.0 - BIG LEAGUE</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=364.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955283477720250610105354.jpg" class="productimage" alt="Skechers Aero Tempo" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Tempo</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=12.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174947653796720250609134217.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=100.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956179397420250610132313.jpg" class="productimage" alt="Skechers GO RUN RIDE 11" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN RIDE 11</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=434.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956217748520250610132937.jpg" class="productimage" alt="Skechers GO RUN 400-INTREPID" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN 400-INTREPID</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=294.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956027271720250610125752.jpg" class="productimage" alt="Skechers GO WALK ARCH FIT 2.0 - IDYLLI" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO WALK ARCH FIT 2.0 - IDYLLI</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=333.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955273940120250610105219.jpg" class="productimage" alt="Skechers Aero Tempo" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Tempo</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹6,499</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=168.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955383444620250610111034.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=60.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955700586420250610120325.jpg" class="productimage" alt="Skechers ULTRA FLEX 3.0-COZY STREAK" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers ULTRA FLEX 3.0-COZY STREAK</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=188.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956160615920250610132006.jpg" class="productimage" alt="Skechers MAX CUSHIONING ARCH FIT 2	" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers MAX CUSHIONING ARCH FIT 2	</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹10,999</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=191.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955523783620250610113357.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=192.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174947589990420250609133139.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=194.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956001892520250610125338.jpg" class="productimage" alt="Skechers D&#039;LUX WALKER 2.0-NEON SITES" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers D&#039;LUX WALKER 2.0-NEON SITES</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=205.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956200616820250610132646.jpg" class="productimage" alt="Skechers GO RUN RIDE 11" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN RIDE 11</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=209.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955739948420250610120959.jpg" class="productimage" alt="Skechers ARCH FIT 2.0 - BIG LEAGUE" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers ARCH FIT 2.0 - BIG LEAGUE</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=213.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955495368820250610112913.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹7,499</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=205.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955316877820250610105928.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=233.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955478843820250610112628.jpg" class="productimage" alt="Skechers Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹6,499</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=235.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955694672720250610120226.jpg" class="productimage" alt="Skechers ULTRA FLEX 3.0-COZY STREAK" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers ULTRA FLEX 3.0-COZY STREAK</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹7,199</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=241.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955908895120250610123808.jpg" class="productimage" alt="Skechers TRES-AIR UNO - AH - MAZING" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers TRES-AIR UNO - AH - MAZING</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=249.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956194494720250610132544.jpg" class="productimage" alt="Skechers GO RUN RIDE 11" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN RIDE 11</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=252.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955461480420250610112334.jpg" class="productimage" alt="Skechers Slip-ins Relaxed Fit: Arch Fit Garza - Langston" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins Relaxed Fit: Arch Fit Garza - Langston</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=269.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955358479520250610110624.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=272.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955255753820250610104917.jpg" class="productimage" alt="Skechers GO RUN Razor 5" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN Razor 5</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,899</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=281.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955884322020250610123403.jpg" class="productimage" alt="Skechers TRES-AIR UNO - AH - MAZING" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers TRES-AIR UNO - AH - MAZING</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=294.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956187219420250610132432.jpg" class="productimage" alt="Skechers GO RUN RIDE 11" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO RUN RIDE 11</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=311.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174947638057320250609133940.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=314.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955310146920250610105821.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=325.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956045162820250610130051.jpg" class="productimage" alt="Skechers GO WALK ARCH FIT 2.0 - IDYLLI" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers GO WALK ARCH FIT 2.0 - IDYLLI</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹6,499</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=333.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955661926120250610115659.jpg" class="productimage" alt="Skechers ARCH FIT 2.0-RICH VISION" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers ARCH FIT 2.0-RICH VISION</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=342.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955468368220250610112443.jpg" class="productimage" alt="Skechers Slip-ins Relaxed Fit: Arch Fit Garza - Langston" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins Relaxed Fit: Arch Fit Garza - Langston</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹9,199</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=346.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955651124520250610115511.jpg" class="productimage" alt="ARCH FIT 2.0-RICH VISION" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">ARCH FIT 2.0-RICH VISION</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=349.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955578732320250610114307.jpg" class="productimage" alt="Skechers Slip-ins: 3D Energy" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins: 3D Energy</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=352.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955585955720250610114419.jpg" class="productimage" alt="Skechers Slip-ins: 3D Energy" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins: 3D Energy</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=364.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955489518120250610112815.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=383.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955517060520250610113250.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹8,199</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=394.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955335080220250610110230.jpg" class="productimage" alt="Skechers Slip-ins: Glide-Step Altus - Aphtur" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins: Glide-Step Altus - Aphtur</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=406.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955898614620250610123626.jpg" class="productimage" alt="Skechers TRES-AIR UNO - AH - MAZING" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers TRES-AIR UNO - AH - MAZING</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=423.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955503612320250610113036.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=434.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955301956020250610105659.jpg" class="productimage" alt="Skechers Aero Spark" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Spark</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=249.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955532193520250610113521.jpg" class="productimage" alt="Skechers Aero Tempo" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Aero Tempo</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=447.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956153278620250610131852.jpg" class="productimage" alt="Skechers MAX CUSHIONING ARCH FIT 2" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers MAX CUSHIONING ARCH FIT 2</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹10,999</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=453.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955809576820250610122135.jpg" class="productimage" alt="ARCH FIT 2.0 - BIG LEAGUE" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">ARCH FIT 2.0 - BIG LEAGUE</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=456.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955980040920250610125000.jpg" class="productimage" alt="Skechers D&#039;LUX WALKER 2.0-NEON SITES" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers D&#039;LUX WALKER 2.0-NEON SITES</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=457.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174956120650220250610131326.jpg" class="productimage" alt="Skechers ARCH FIT 2.0 - ROAD WAVEt" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers ARCH FIT 2.0 - ROAD WAVEt</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹6,799</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=464.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955484061820250610112720.jpg" class="productimage" alt="Skechers SKX Aero Burst" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers SKX Aero Burst</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹7,899</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=468.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/174955342047320250610110340.jpg" class="productimage" alt="Skechers Slip-ins: Glide-Step Altus - Aphtur" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skechers Slip-ins: Glide-Step Altus - Aphtur</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                    </div>
+    </main>
+    
+   
+    <footer class="site-footer mt-2">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

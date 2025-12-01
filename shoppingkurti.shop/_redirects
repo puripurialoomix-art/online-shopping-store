@@ -1,0 +1,6 @@
+# Redirect old URLs to new format
+/singlepageview.php?pid=:id  /singlepageview@pid=:id.html  301
+/category.php?cid=:id  /category@cid=:id.html  301
+
+# 404 redirect
+/* /index.html 200

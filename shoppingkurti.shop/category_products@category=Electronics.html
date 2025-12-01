@@ -1,0 +1,1414 @@
+﻿<!DOCTYPE html>
+<html lang="gu-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - પ્રોડક્ટ્સ | YourStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f1f2f4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+        
+        .page-header {
+            background-color: #FFFFFF;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+        }
+        /* -- START: CHANGED CSS -- */
+        .header-left-section {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* એરો, લોગો અને શીર્ષક વચ્ચે જગ્યા */
+        }
+        .back-arrow {
+            color: #212121;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .header-logo {
+            height: 32px;
+            width: auto;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            color: #212121;
+            white-space: nowrap;
+        }
+        /* -- END: CHANGED CSS (header-center દૂર કર્યું છે) -- */
+        .header-cart a {
+            color: #212121;
+            text-decoration: none;
+            position: relative;
+            font-size: 24px;
+        }
+        .header-cart .badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            font-size: 10px;
+        }
+
+        .products-section { background-color: #f1f2f4; padding-top: 6px; }
+        .mainbody { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: #e0e0e0; }
+        .products { background: white; text-decoration: none; color: black; }
+        .productcard { padding: 10px; display: flex; flex-direction: column; height: 100%; }
+        .imagecontainer { text-align: center; }
+        .productimage { width: 100%; height: 150px; object-fit: contain; }
+        .product-info { padding-top: 10px; }
+        .product-name { font-size: 14px; color: #212121; line-height: 1.4; height: 40px; overflow: hidden; margin-bottom: 8px; }
+        .price-line { display: flex; align-items: center; flex-wrap: wrap; }
+        .selling-price { font-size: 16px; font-weight: 500; color: #212121; }
+        .mrp { text-decoration: line-through; color: #878787; font-size: 12px; margin: 0 8px; }
+        .discount { font-size: 13px; color: #388e3c; font-weight: 500; display: flex; align-items: center;}
+        .discount-arrow { margin-left: 2px; }
+        .wow-offer { margin-top: 4px; display: flex; align-items: center; }
+        .wow-badge { height: 18px; margin-right: 6px; }
+        .wow-price { font-size: 14px; font-weight: 500; color: #212121; }
+        .offer-text { font-size: 12px; color: #878787; margin-left: 6px; }
+        .rating-line { display: flex; align-items: center; margin-top: 6px; }
+        .rating-stars { font-size: 14px; color: #26a541; }
+        .rating-stars .bi-star { color: #e0e0e0; }
+        .fassured-logo-small { height: 16px; margin-left: 10px; }
+        .site-footer { background-color: #172337; color: #fff; font-size: 12px; padding: 40px 15px 0; line-height: 1.5; text-align: left; }
+        .footer-main-container { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px; }
+        .footer-column h4 { color: #878787; font-size: 12px; font-weight: 500; margin-bottom: 12px; text-transform: uppercase; }
+        .footer-column ul { list-style: none; padding: 0; margin: 0; }
+        .footer-column ul li { margin-bottom: 9px; }
+        .footer-column ul li a { color: #fff; text-decoration: none; }
+        .footer-bottom-bar { border-top: 1px solid #454d5e; padding: 25px 0; margin-top: 20px; font-size: 13px; }
+        .bottom-bar-container { display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 15px 20px; }
+        .bottom-bar-link { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <!-- START: CHANGED HTML -->
+        <div class="header-left-section">
+            <!-- ફેરફાર 1: આ લિંક હવે JavaScript વડે પાછળ જશે -->
+            <a href="category_products@category=Electronics.html#" onclick="history.back(); return false;" class="back-arrow"><i class="bi bi-arrow-left"></i></a>
+            
+            <!-- ફેરફાર 2: લોગો અને ટાઇટલને સેન્ટરમાંથી અહીં ખસેડવામાં આવ્યા છે -->
+            <img src="assets/catogary/logo.png" alt="Logo" class="header-logo">
+            <h1 class="header-title">Electronics</h1>
+        </div>
+        <!-- END: CHANGED HTML -->
+        
+        <div class="header-cart">
+            <a href="cart.html">
+                <i class="bi bi-cart3"></i>
+                            </a>
+        </div>
+    </header>
+    
+    <main class="products-section">
+        <div class="mainbody">
+                            <a href="add_to_cart.php@pid=54.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158720831920250704000008.jpg" class="productimage" alt="boAt Aavante Bar A2060 Dolby  " loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Aavante Bar A2060 Dolby  </p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹9,999</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=413.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175162094586920250704092225.jpg" class="productimage" alt="Samsung 138 cm (55 inches) Vision AI 4K Ultra HD Smart QLED TV QA55QEF1AULXL" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Samsung 138 cm (55 inches) Vision AI 4K Ultra HD Smart QLED TV QA55QEF1AULXL</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹53,990</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=170.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158715550820250703235915.jpg" class="productimage" alt="boAt Aavante Bar 5500DA" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Aavante Bar 5500DA</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹17,999</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=23.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158728869020250704000128.jpg" class="productimage" alt="boAt Aavante Bar Quake Pro, 240W Signature Sound, 2.1CH, Wireless Subwoofer, BT v5.3, Multiple Ports, Bass &amp; Treble Controls, Bluetooth Sound bar, Home Theatre Soundbar Speaker (Premium Black)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Aavante Bar Quake Pro, 240W Signature Sound, 2.1CH, Wireless Subwoofer, BT v5.3, Multiple Ports, Bass &amp; Treble Controls, Bluetooth Sound bar, Home Theatre Soundbar Speaker (Premium Black)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹9,999</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=287.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161205926520250704065419.jpg" class="productimage" alt="boAt Airdopes 800" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes 800</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,799</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=250.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158666467820250703235104.jpg" class="productimage" alt="Noise Halo Plus 1.46&quot; Super AMOLED Display Elite Smart Watch, Bluetooth Calling, Stainless Steel Build, Always on Display, Upto 7 Days Battery (Elite Black)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Noise Halo Plus 1.46&quot; Super AMOLED Display Elite Smart Watch, Bluetooth Calling, Stainless Steel Build, Always on Display, Upto 7 Days Battery (Elite Black)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹3,499</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=139.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157156259020250703193922.jpg" class="productimage" alt="boAt Airdopes 170 Wireless Bluetooth" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes 170 Wireless Bluetooth</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,599</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=74.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161235944420250704065919.jpg" class="productimage" alt="boAt Immortal 170" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Immortal 170</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹1,849</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=276.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161271753820250704070517.jpg" class="productimage" alt="boAt Rockerz 600 KKR Edition" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Rockerz 600 KKR Edition</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹2,499</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=275.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158523859820250703232718.jpg" class="productimage" alt="JBL Tune 510BT, On Ear Wireless Headphones with Mic, up to 40 Hours Playtime" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">JBL Tune 510BT, On Ear Wireless Headphones with Mic, up to 40 Hours Playtime</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹2,799</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=139.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161293929120250704070859.jpg" class="productimage" alt="boAt Chrome Horizon" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Chrome Horizon</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹3,599</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=226.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161287067620250704070750.jpg" class="productimage" alt="boAt Lunar Embrace" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Lunar Embrace</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹3,499</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=165.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157119532220250703193315.jpg" class="productimage" alt="boAt Stone 352" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Stone 352</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,799</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=242.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157130672220250703193506.jpg" class="productimage" alt="boAt Rockerz 450 Pro " loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Rockerz 450 Pro </p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=203.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157408268820250703202122.jpg" class="productimage" alt="boAt Airdopes 138 PRO" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes 138 PRO</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,599</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=206.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158564156420250703233401.jpg" class="productimage" alt="JBL Go 3 Wireless Portable Bluetooth Mini Speaker, Small Speaker with Pro Sound, Vibrant Colors with Rugged Fabric Design, Lightweight IP67 Waterproof, Type C Interface (Without Mic, Black)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">JBL Go 3 Wireless Portable Bluetooth Mini Speaker, Small Speaker with Pro Sound, Vibrant Colors with Rugged Fabric Design, Lightweight IP67 Waterproof, Type C Interface (Without Mic, Black)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹2,799</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=226.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161202650820250704065346.jpg" class="productimage" alt="OnePlus Nord Buds 3 Truly Wireless Bluetooth in Ear Earbuds with Up to 32Db Active Noise Cancellation,10Mins for 11Hours Fast Charging with Up to 43H Music Playback -Harmonic Gray" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">OnePlus Nord Buds 3 Truly Wireless Bluetooth in Ear Earbuds with Up to 32Db Active Noise Cancellation,10Mins for 11Hours Fast Charging with Up to 43H Music Playback -Harmonic Gray</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹2,099</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=228.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161184218220250704065042.jpg" class="productimage" alt="OnePlus Nord Buds 2r True Wireless in Ear Earbuds with Mic, 12.4mm Drivers, Playback:Upto 38hr case,4-Mic Design, IP55 Rating " loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">OnePlus Nord Buds 2r True Wireless in Ear Earbuds with Mic, 12.4mm Drivers, Playback:Upto 38hr case,4-Mic Design, IP55 Rating </p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,649</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=242.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161222527220250704065705.jpg" class="productimage" alt="OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation,12.4Mm Dynamic Drivers,10Mins for 11Hr Fast Charging with Upto 44Hrs Music Playback" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation,12.4Mm Dynamic Drivers,10Mins for 11Hr Fast Charging with Upto 44Hrs Music Playback</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹2,799</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=243.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157364574620250703201405.jpg" class="productimage" alt="boAt Airdopes 138" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes 138</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=250.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158574843620250703233548.jpg" class="productimage" alt="Saregama Carvaan Mini Hindi - Music Player with 401 Pre-Loaded Retro Songs, Bluetooth/FM/AM/AUX, Type-C Charger (Coral Pink)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Saregama Carvaan Mini Hindi - Music Player with 401 Pre-Loaded Retro Songs, Bluetooth/FM/AM/AUX, Type-C Charger (Coral Pink)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹2,799</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=257.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158812856420250704001528.jpg" class="productimage" alt="Skybags Tooper Set of 3 (Cabin+ Medium+Large) Hard Luggage (55+65+75 cm) | Polypropylene Luggage Trolley with 8 Spinner Wheels|Green|Unisex" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Skybags Tooper Set of 3 (Cabin+ Medium+Large) Hard Luggage (55+65+75 cm) | Polypropylene Luggage Trolley with 8 Spinner Wheels|Green|Unisex</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹7,999</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=412.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158638624520250703234626.jpg" class="productimage" alt="Philips Hair Dryer Powerful Drying with Less HeatIIonic Care for Smooth &amp; Shiny HairI 3 Styling Options for Salon like BlowdryI 1600 WattsI Cool ShotI Men &amp; WomenI 2 Year WarrantyI BHD318/00, Purple" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Philips Hair Dryer Powerful Drying with Less HeatIIonic Care for Smooth &amp; Shiny HairI 3 Styling Options for Salon like BlowdryI 1600 WattsI Cool ShotI Men &amp; WomenI 2 Year WarrantyI BHD318/00, Purple</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹2,999</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=276.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158548593920250703233125.jpg" class="productimage" alt="JBL Flip 6 Wireless Portable Bluetooth Speaker Pro Sound, Upto 12 Hours Playtime, IP67 Water &amp; Dustproof, PartyBoost &amp; Personalization App (Without Mic, Black)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">JBL Flip 6 Wireless Portable Bluetooth Speaker Pro Sound, Upto 12 Hours Playtime, IP67 Water &amp; Dustproof, PartyBoost &amp; Personalization App (Without Mic, Black)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹8,999</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=279.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158607156120250703234111.jpg" class="productimage" alt="JBL Partybox 110, Wireless Bluetooth Party Speaker, 160W Monstrous Pro Sound, Dynamic Light Show, Upto 12Hrs Playtime, Built-in Powerbank, Guitar &amp; Mic Input, PartyBox App, Splashproof (Black)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">JBL Partybox 110, Wireless Bluetooth Party Speaker, 160W Monstrous Pro Sound, Dynamic Light Show, Upto 12Hrs Playtime, Built-in Powerbank, Guitar &amp; Mic Input, PartyBox App, Splashproof (Black)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹24,999</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=287.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158748251020250704000442.jpg" class="productimage" alt="ZEBRONICS Juke bar 9550 pro 5.2 Soundbar (625 Watts), Dolby Audio, Dual Wireless Subwoofer &amp; Satellite, BT v5.3, HDMI ARC, Optical, Powerful Bass, RGB LED Lights, Wall Mountable" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">ZEBRONICS Juke bar 9550 pro 5.2 Soundbar (625 Watts), Dolby Audio, Dual Wireless Subwoofer &amp; Satellite, BT v5.3, HDMI ARC, Optical, Powerful Bass, RGB LED Lights, Wall Mountable</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹17,449</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=290.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157230191020250703195141.jpg" class="productimage" alt="boAt Rockerz 255 Pro+  " loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Rockerz 255 Pro+  </p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,199</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=293.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161245094820250704070050.jpg" class="productimage" alt="boAt Immortal 1300" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Immortal 1300</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹3,499</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=302.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157374547820250703201545.jpg" class="productimage" alt="boAt Nirvana Space" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Nirvana Space</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹2,499</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=317.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157344162720250703201041.jpg" class="productimage" alt="EnergyShroom PB300" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">EnergyShroom PB300</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,199</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=318.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175162184152220250704093721.jpg" class="productimage" alt="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 256GB Storage) | Lifetime Display Warranty | Qualcomm® Snapdragon™ 7 Gen 3 - Best in The Segment | 50 MP Camera with OIS" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 256GB Storage) | Lifetime Display Warranty | Qualcomm® Snapdragon™ 7 Gen 3 - Best in The Segment | 50 MP Camera with OIS</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹599</span>
+                                <del class="mrp">₹24,999</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹569</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=327.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158506740120250703232427.jpg" class="productimage" alt="JBL Wave Buds 2 Ear Buds Wireless BluetoothV5.3, Active Noise Cancellation EarBuds" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">JBL Wave Buds 2 Ear Buds Wireless BluetoothV5.3, Active Noise Cancellation EarBuds</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹2,999</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=330.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175158590298020250703233822.jpg" class="productimage" alt="Saregama Carvaan Hindi - Portable Music Player with 5000 Preloaded Songs, FM/BT/AUX (Cherrywood Red)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Saregama Carvaan Hindi - Portable Music Player with 5000 Preloaded Songs, FM/BT/AUX (Cherrywood Red)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹7,599</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=388.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161212889720250704065528.jpg" class="productimage" alt="OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation,12.4Mm Dynamic Drivers,10Mins for 11Hrs Fast Charging with Upto 44Hrs Music Playback" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation,12.4Mm Dynamic Drivers,10Mins for 11Hrs Fast Charging with Upto 44Hrs Music Playback</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹2,799</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=14.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161253333820250704070213.jpg" class="productimage" alt="boAt Immortal 400" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Immortal 400</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹2,359</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=403.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157176796620250703194247.jpg" class="productimage" alt="boAt Airdopes ProGear" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes ProGear</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,999</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=409.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175161263929320250704070359.jpg" class="productimage" alt="OnePlus Nord Buds 3 Pro" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">OnePlus Nord Buds 3 Pro</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹2,999</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=412.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157167043320250703194110.jpg" class="productimage" alt="boAt Nirvana X TWS" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Nirvana X TWS</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹2,799</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=413.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157145539620250703193735.jpg" class="productimage" alt="boAt Airdopes 213 " loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes 213 </p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹3,199</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=429.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157185061420250703194410.jpg" class="productimage" alt="boAt Nirvana Ion" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Nirvana Ion</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,899</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=431.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175162174927720250704093549.jpg" class="productimage" alt="Sony New SA-D40M2 4.1ch Home Theatre/PC Speaker System with 100W Power Output and Powerful Subwoofer - Black" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Sony New SA-D40M2 4.1ch Home Theatre/PC Speaker System with 100W Power Output and Powerful Subwoofer - Black</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹10,999</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=444.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175162065716220250704091737.jpg" class="productimage" alt="Safari Thorium Neo 8 Wheels 55,66 and 77 Cm Small,Medium and Large 4 Wheel Inline 3 Trolley Bags Polycarbonate 360 Degree Wheeling System Luggage,4 Wheel Inline Trolley Bags,Graphite Blue" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Safari Thorium Neo 8 Wheels 55,66 and 77 Cm Small,Medium and Large 4 Wheel Inline 3 Trolley Bags Polycarbonate 360 Degree Wheeling System Luggage,4 Wheel Inline Trolley Bags,Graphite Blue</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹6,999</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=458.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175157354625120250703201226.jpg" class="productimage" alt="boAt Airdopes Ultra Plus" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">boAt Airdopes Ultra Plus</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹1,599</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                    </div>
+    </main>
+    
+   
+    <footer class="site-footer mt-2">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

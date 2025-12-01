@@ -1,0 +1,60 @@
+🛒 CART SYSTEM - HOW TO USE
+================================
+
+📝 STEP 1: Update All Product Pages
+------------------------------------
+Double-click: update-all-products.bat
+
+Yeh sabhi product pages ko automatically update kar dega!
+
+
+🧪 STEP 2: Test Karo
+--------------------
+1. Open: clear-cart.html (cart reset ke liye)
+2. Open: singlepageview@pid=665.html
+3. Click: "Add To Cart" button
+4. Cart page automatically khulega
+5. Product dikhega cart mein
+
+
+✅ WORKING FEATURES
+-------------------
+✅ Add to Cart → Cart page khulta hai
+✅ Cart badge shows count (0 when empty)
+✅ Update quantity in cart
+✅ Remove items from cart
+✅ Checkout with address form
+✅ Order confirmation page
+
+
+🐛 TROUBLESHOOTING
+------------------
+Problem: Cart badge not showing?
+Solution: Open clear-cart.html
+
+Problem: Old products showing?
+Solution: Open clear-cart.html
+
+Problem: Add to cart not working?
+Solution: Press F12, check console for errors
+
+
+📁 IMPORTANT FILES
+------------------
+✅ js/cart.js - Cart system
+✅ js/cart-system.js - Homepage
+✅ js/product-actions.js - Product actions
+✅ cart.html - Cart page
+✅ checkout.html - Checkout
+✅ order-success.html - Success page
+✅ clear-cart.html - Reset cart
+
+
+🚀 NEXT STEPS
+-------------
+1. Run: update-all-products.bat
+2. Test: singlepageview@pid=665.html
+3. Enjoy! 🎉
+
+
+Need help? Check browser console (F12)

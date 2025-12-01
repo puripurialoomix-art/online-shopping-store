@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | jay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body { background-color: #f1f2f4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .main-container { max-width: 1248px; margin: 0 auto; background-color: #fff; min-height: 100vh; }
+        .page-header { background-color: #fff; padding: 10px 16px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        .back-arrow { color: #212121; text-decoration: none; font-size: 24px; margin-right: 16px; }
+        .cart-container { padding: 16px; }
+        .empty-cart { text-align: center; padding: 60px 20px; }
+        .empty-cart img { width: 200px; margin-bottom: 20px; opacity: 0.5; }
+        .cart-item { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 12px; display: flex; gap: 12px; }
+        .cart-item-image { width: 80px; height: 80px; object-fit: contain; border-radius: 4px; }
+        .cart-item-details { flex: 1; }
+        .cart-item-name { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+        .cart-item-price { font-size: 16px; font-weight: bold; color: #212121; }
+        .cart-item-mrp { text-decoration: line-through; color: #878787; font-size: 12px; margin-left: 8px; }
+        .quantity-controls { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+        .quantity-btn { width: 28px; height: 28px; border: 1px solid #e0e0e0; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+        .quantity-btn:hover { background: #f0f0f0; }
+        .remove-btn { color: #d32f2f; cursor: pointer; font-size: 14px; margin-top: 8px; }
+        .remove-btn:hover { text-decoration: underline; }
+        .price-summary { position: sticky; bottom: 0; background: #fff; border-top: 1px solid #e0e0e0; padding: 16px; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); }
+        .price-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .total-row { font-size: 18px; font-weight: bold; padding-top: 8px; border-top: 1px solid #e0e0e0; }
+        .checkout-btn { width: 100%; background: #FB641B; color: #fff; border: none; padding: 14px; font-size: 16px; font-weight: 500; border-radius: 4px; margin-top: 12px; }
+        .checkout-btn:hover { background: #e55a15; }
+        .continue-shopping { text-align: center; margin-top: 16px; }
+        .continue-shopping a { color: #2874f0; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <header class="page-header">
+        <a href="index.html" class="back-arrow"><i class="material-icons">arrow_back</i></a>
+        <h1 style="font-size: 18px; margin: 0;">My Cart</h1>
+    </header>
+
+    <div class="cart-container">
+        <div id="emptyCart" class="empty-cart" style="display: none;">
+            <i class="bi bi-cart-x" style="font-size: 100px; color: #ccc;"></i>
+            <h3>Your cart is empty</h3>
+            <p class="text-muted">Add items to get started</p>
+            <a href="index.html" class="btn btn-primary mt-3">Continue Shopping</a>
+        </div>
+
+        <div id="cartItems"></div>
+    </div>
+
+    <div id="priceSummary" class="price-summary" style="display: none;">
+        <div class="price-row">
+            <span>Price (<span id="itemCount">0</span> items)</span>
+            <span id="totalPrice">₹0</span>
+        </div>
+        <div class="price-row">
+            <span>Delivery Charges</span>
+            <span class="text-success">FREE</span>
+        </div>
+        <div class="price-row total-row">
+            <span>Total Amount</span>
+            <span id="finalTotal">₹0</span>
+        </div>
+        <button class="checkout-btn" onclick="proceedToCheckout()">PLACE ORDER</button>
+        <div class="continue-shopping">
+            <a href="index.html">← Continue Shopping</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/cart.js"></script>
+<script>
+function renderCart() {
+    const cart = cartManager.getCart();
+    const cartItemsContainer = document.getElementById('cartItems');
+    const emptyCart = document.getElementById('emptyCart');
+    const priceSummary = document.getElementById('priceSummary');
+
+    if (cart.length === 0) {
+        emptyCart.style.display = 'block';
+        priceSummary.style.display = 'none';
+        cartItemsContainer.innerHTML = '';
+        return;
+    }
+
+    emptyCart.style.display = 'none';
+    priceSummary.style.display = 'block';
+
+    cartItemsContainer.innerHTML = cart.map(item => `
+        <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+            <div class="cart-item-details">
+                <div class="cart-item-name">${item.name}</div>
+                ${item.size ? `<div class="text-muted small">Size: ${item.size}</div>` : ''}
+                <div>
+                    <span class="cart-item-price">₹${item.price}</span>
+                    <span class="cart-item-mrp">₹${item.mrp}</span>
+                </div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', '${item.size}', ${item.quantity - 1})">
+                        <i class="bi bi-dash"></i>
+                    </button>
+                    <span>${item.quantity}</span>
+                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', '${item.size}', ${item.quantity + 1})">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </div>
+                <div class="remove-btn" onclick="removeItem('${item.id}', '${item.size}')">
+                    <i class="bi bi-trash"></i> Remove
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    updatePriceSummary();
+}
+
+function updateQuantity(productId, size, quantity) {
+    cartManager.updateQuantity(productId, size, quantity);
+    renderCart();
+}
+
+function removeItem(productId, size) {
+    if (confirm('Remove this item from cart?')) {
+        cartManager.removeFromCart(productId, size);
+        renderCart();
+    }
+}
+
+function updatePriceSummary() {
+    const total = cartManager.getCartTotal();
+    const count = cartManager.getCartCount();
+    
+    document.getElementById('itemCount').textContent = count;
+    document.getElementById('totalPrice').textContent = '₹' + total;
+    document.getElementById('finalTotal').textContent = '₹' + total;
+}
+
+function proceedToCheckout() {
+    window.location.href = 'checkout.html';
+}
+
+// Render cart on page load
+document.addEventListener('DOMContentLoaded', renderCart);
+</script>
+</body>
+</html>

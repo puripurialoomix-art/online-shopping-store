@@ -1,0 +1,1174 @@
+﻿<!DOCTYPE html>
+<html lang="gu-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dryfruit - પ્રોડક્ટ્સ | YourStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f1f2f4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+        
+        .page-header {
+            background-color: #FFFFFF;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+        }
+        /* -- START: CHANGED CSS -- */
+        .header-left-section {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* એરો, લોગો અને શીર્ષક વચ્ચે જગ્યા */
+        }
+        .back-arrow {
+            color: #212121;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .header-logo {
+            height: 32px;
+            width: auto;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            color: #212121;
+            white-space: nowrap;
+        }
+        /* -- END: CHANGED CSS (header-center દૂર કર્યું છે) -- */
+        .header-cart a {
+            color: #212121;
+            text-decoration: none;
+            position: relative;
+            font-size: 24px;
+        }
+        .header-cart .badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            font-size: 10px;
+        }
+
+        .products-section { background-color: #f1f2f4; padding-top: 6px; }
+        .mainbody { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: #e0e0e0; }
+        .products { background: white; text-decoration: none; color: black; }
+        .productcard { padding: 10px; display: flex; flex-direction: column; height: 100%; }
+        .imagecontainer { text-align: center; }
+        .productimage { width: 100%; height: 150px; object-fit: contain; }
+        .product-info { padding-top: 10px; }
+        .product-name { font-size: 14px; color: #212121; line-height: 1.4; height: 40px; overflow: hidden; margin-bottom: 8px; }
+        .price-line { display: flex; align-items: center; flex-wrap: wrap; }
+        .selling-price { font-size: 16px; font-weight: 500; color: #212121; }
+        .mrp { text-decoration: line-through; color: #878787; font-size: 12px; margin: 0 8px; }
+        .discount { font-size: 13px; color: #388e3c; font-weight: 500; display: flex; align-items: center;}
+        .discount-arrow { margin-left: 2px; }
+        .wow-offer { margin-top: 4px; display: flex; align-items: center; }
+        .wow-badge { height: 18px; margin-right: 6px; }
+        .wow-price { font-size: 14px; font-weight: 500; color: #212121; }
+        .offer-text { font-size: 12px; color: #878787; margin-left: 6px; }
+        .rating-line { display: flex; align-items: center; margin-top: 6px; }
+        .rating-stars { font-size: 14px; color: #26a541; }
+        .rating-stars .bi-star { color: #e0e0e0; }
+        .fassured-logo-small { height: 16px; margin-left: 10px; }
+        .site-footer { background-color: #172337; color: #fff; font-size: 12px; padding: 40px 15px 0; line-height: 1.5; text-align: left; }
+        .footer-main-container { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px; }
+        .footer-column h4 { color: #878787; font-size: 12px; font-weight: 500; margin-bottom: 12px; text-transform: uppercase; }
+        .footer-column ul { list-style: none; padding: 0; margin: 0; }
+        .footer-column ul li { margin-bottom: 9px; }
+        .footer-column ul li a { color: #fff; text-decoration: none; }
+        .footer-bottom-bar { border-top: 1px solid #454d5e; padding: 25px 0; margin-top: 20px; font-size: 13px; }
+        .bottom-bar-container { display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 15px 20px; }
+        .bottom-bar-link { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <!-- START: CHANGED HTML -->
+        <div class="header-left-section">
+            <!-- ફેરફાર 1: આ લિંક હવે JavaScript વડે પાછળ જશે -->
+            <a href="category_products@category=dryfruit.html#" onclick="history.back(); return false;" class="back-arrow"><i class="bi bi-arrow-left"></i></a>
+            
+            <!-- ફેરફાર 2: લોગો અને ટાઇટલને સેન્ટરમાંથી અહીં ખસેડવામાં આવ્યા છે -->
+            <img src="assets/catogary/logo.png" alt="Logo" class="header-logo">
+            <h1 class="header-title">dryfruit</h1>
+        </div>
+        <!-- END: CHANGED HTML -->
+        
+        <div class="header-cart">
+            <a href="cart.html">
+                <i class="bi bi-cart3"></i>
+                            </a>
+        </div>
+    </header>
+    
+    <main class="products-section">
+        <div class="mainbody">
+                            <a href="add_to_cart.php@pid=510.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564193151620250819221851.webp" class="productimage" alt="Premium Celebration Combo - A Healthy Gift Box of Cashews, Raisins, and Figs (1kg Pack of Each)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Premium Celebration Combo - A Healthy Gift Box of Cashews, Raisins, and Figs (1kg Pack of Each)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹899</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=660.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564210765420250819222147.webp" class="productimage" alt="DRY NUTS PREMIUM Healthy &amp; Delicious Dry Fruits Gift Box (4 KG Combo Pack)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRY NUTS PREMIUM Healthy &amp; Delicious Dry Fruits Gift Box (4 KG Combo Pack)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,889</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=550.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564222349220250819222343.webp" class="productimage" alt="Dry Fruits Gift Box: An Exquisite Collection of Cashews, Almonds, and Raisins with Figs" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Dry Fruits Gift Box: An Exquisite Collection of Cashews, Almonds, and Raisins with Figs</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=565.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564244376820250819222723.webp" class="productimage" alt="Drynuts Premium Heritage Collection: A 4kg Curated Assortment of Gourmet Nuts &amp; Dried Fruits" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Drynuts Premium Heritage Collection: A 4kg Curated Assortment of Gourmet Nuts &amp; Dried Fruits</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    89%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=615.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564253614120250819222856.webp" class="productimage" alt="Premium Quality Nuts &amp; Dried Fruits Collection (Set of 4 x 1 KG)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Premium Quality Nuts &amp; Dried Fruits Collection (Set of 4 x 1 KG)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=580.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564264852620250819223048.webp" class="productimage" alt="Drynuts Premium Dry Fruit Combo Pack (California Almonds 1kg, Cashews 1kg, Raisins 1kg) - Total 3kg" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Drynuts Premium Dry Fruit Combo Pack (California Almonds 1kg, Cashews 1kg, Raisins 1kg) - Total 3kg</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹1,199</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=665.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564279397820250819223313.webp" class="productimage" alt="DRYNUTS Premium Dry Fruits Combo Pack - 1 KG Each (California Almonds, Cashews, Raisins, Figs)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Dry Fruits Combo Pack - 1 KG Each (California Almonds, Cashews, Raisins, Figs)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=555.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564299164520250819223631.webp" class="productimage" alt="DRYNUTS Premium Combo Pack: California Almonds (1 KG) &amp; Turkish Figs (1 KG) - The Perfect Healthy Indulgence" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Combo Pack: California Almonds (1 KG) &amp; Turkish Figs (1 KG) - The Perfect Healthy Indulgence</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,199</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=535.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564304172220250819223721.webp" class="productimage" alt="DRYNUTS Premium Healthy Combo: Gourmet California Almonds (1 KG) &amp; Classic Cashew Nuts (1 KG)" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Healthy Combo: Gourmet California Almonds (1 KG) &amp; Classic Cashew Nuts (1 KG)</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,889</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=550.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564313727820250819223857.webp" class="productimage" alt="DRYNUTS Exquisite Dry Fruit &amp; Nut Gift Box - Gourmet Assortment for Festive &amp; Corporate Gifting" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Exquisite Dry Fruit &amp; Nut Gift Box - Gourmet Assortment for Festive &amp; Corporate Gifting</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹899</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=555.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564324572920250819224045.webp" class="productimage" alt="DRYNUTS Premium Dried Figs (Anjeer) - 1 KG | Naturally Sweet, Soft &amp; Chewy | Rich in Dietary Fiber | Resealable Pouch" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Dried Figs (Anjeer) - 1 KG | Naturally Sweet, Soft &amp; Chewy | Rich in Dietary Fiber | Resealable Pouch</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=560.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564335597320250819224235.webp" class="productimage" alt="DRYNUTS Premium Irani Khajoor (Iranian Dates) - 1 KG | Authentic &amp; Naturally Sweet | Exquisite Luxury Gift Box" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Irani Khajoor (Iranian Dates) - 1 KG | Authentic &amp; Naturally Sweet | Exquisite Luxury Gift Box</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹899</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=565.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564342370320250819224343.webp" class="productimage" alt="DRYNUTS Premium Kaju Katli - 1 KG | Authentic Indian Cashew Fudge | Perfect for Festivals &amp; Gifting" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Kaju Katli - 1 KG | Authentic Indian Cashew Fudge | Perfect for Festivals &amp; Gifting</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=570.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564349864120250819224458.webp" class="productimage" alt="DRYNUTS Premium Black Raisins | Naturally Sweet, Plump &amp; Juicy | Rich in Iron &amp; Antioxidants | All-Natural Healthy Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Black Raisins | Naturally Sweet, Plump &amp; Juicy | Rich in Iron &amp; Antioxidants | All-Natural Healthy Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=605.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564367024520250819224750.webp" class="productimage" alt="DRYNUTS Premium Berry Mix - 1 KG | Gourmet Blend of Dried Berries | Antioxidant-Rich, All-Natural Healthy Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Berry Mix - 1 KG | Gourmet Blend of Dried Berries | Antioxidant-Rich, All-Natural Healthy Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=580.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564373233920250819224852.webp" class="productimage" alt="DRYNUTS Premium Medjool Dates - 1 KG | All-Natural, Plump &amp; Juicy | Gourmet &quot;King of Dates&quot; | Rich in Fiber &amp; Potassium" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Medjool Dates - 1 KG | All-Natural, Plump &amp; Juicy | Gourmet &quot;King of Dates&quot; | Rich in Fiber &amp; Potassium</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="add_to_cart.php@pid=610.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564384357920250819225043.webp" class="productimage" alt="DRYNUTS Premium Long Raisins (Kishmish) - 1 KG | Sundried, Sweet &amp; Juicy | All-Natural Golden Kishmish" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Long Raisins (Kishmish) - 1 KG | Sundried, Sweet &amp; Juicy | All-Natural Golden Kishmish</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=590.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564401593320250819225335.webp" class="productimage" alt="DRYNUTS Premium Kashmiri Kesar (Saffron) - 100g | 100% Pure, Grade A, All-Red Threads | Sourced from the Kashmir Valley" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Kashmiri Kesar (Saffron) - 100g | 100% Pure, Grade A, All-Red Threads | Sourced from the Kashmir Valley</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=595.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564408395220250819225443.webp" class="productimage" alt="DRYNUTS Pure Himalayan Shilajit Resin - 100g | 100% Natural &amp; Authentic | For Energy, Strength &amp; Vitality" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Pure Himalayan Shilajit Resin - 100g | 100% Natural &amp; Authentic | For Energy, Strength &amp; Vitality</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=600.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564414293620250819225542.webp" class="productimage" alt="DRYNUTS Premium Whole Cashews - 1 KG | W320 Grade, Creamy &amp; Crunchy | All-Natural Kaju for Healthy Snacking | Resealable Pouch" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Whole Cashews - 1 KG | W320 Grade, Creamy &amp; Crunchy | All-Natural Kaju for Healthy Snacking | Resealable Pouch</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=605.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564431636420250819225836.webp" class="productimage" alt="DRYNUTS Premium Pumpkin Seeds - 1 KG | Raw &amp; Unroasted | Rich in Protein, Magnesium &amp; Zinc | Healthy Superfood Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Pumpkin Seeds - 1 KG | Raw &amp; Unroasted | Rich in Protein, Magnesium &amp; Zinc | Healthy Superfood Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=610.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564441294120250819230012.webp" class="productimage" alt="DRYNUTS Premium Phool Makhana (Fox Nuts) - 1 KG | Healthy, Crunchy &amp; Light Snack | Popped Lotus Seeds" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Phool Makhana (Fox Nuts) - 1 KG | Healthy, Crunchy &amp; Light Snack | Popped Lotus Seeds</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=615.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564449429920250819230134.webp" class="productimage" alt="DRYNUTS Premium Kalmi Dates - 1 KG | Soft, Juicy &amp; Delicious | All-Natural Khajoor | Rich in Fiber &amp; Energy" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Kalmi Dates - 1 KG | Soft, Juicy &amp; Delicious | All-Natural Khajoor | Rich in Fiber &amp; Energy</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=620.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564458410220250819230304.webp" class="productimage" alt="DRYNUTS Premium Dry Anjeer (Dried Figs) - 1 KG | Naturally Sweet, Soft &amp; Chewy | Rich in Dietary Fiber for Digestion | Resealable Pouch" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Dry Anjeer (Dried Figs) - 1 KG | Naturally Sweet, Soft &amp; Chewy | Rich in Dietary Fiber for Digestion | Resealable Pouch</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹389</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹370</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=625.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564479228720250819230632.webp" class="productimage" alt="DRYNUTS Dry Anjeer (Premium Dried Figs) - 1 KG | All-Natural, Sweet &amp; Chewy | Rich in Dietary Fiber for Digestive Health" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Dry Anjeer (Premium Dried Figs) - 1 KG | All-Natural, Sweet &amp; Chewy | Rich in Dietary Fiber for Digestive Health</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    93%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=630.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564489091320250819230810.webp" class="productimage" alt="DRYNUTS Premium Green Cardamom (Elaichi) - 1 KG | Whole, Aromatic &amp; Bold Size Pods | Queen of Spices for Tea, Sweets &amp; Cooking" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Green Cardamom (Elaichi) - 1 KG | Whole, Aromatic &amp; Bold Size Pods | Queen of Spices for Tea, Sweets &amp; Cooking</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹899</del>
+                                <span class="discount">
+                                    85%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=635.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564497312820250819230933.webp" class="productimage" alt="DRYNUTS Premium Dry Figs (Anjeer) - 1 KG | All-Natural, Soft &amp; Sweet | Rich in Fiber, Calcium &amp; Iron | Healthy Superfood" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Dry Figs (Anjeer) - 1 KG | All-Natural, Soft &amp; Sweet | Rich in Fiber, Calcium &amp; Iron | Healthy Superfood</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,889</del>
+                                <span class="discount">
+                                    87%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=640.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564506240420250819231102.webp" class="productimage" alt="DRYNUTS Dried Turkish Apricots (Pitted) - 1 KG | Premium, Plump &amp; Chewy | All-Natural, No Added Sugar | Rich in Fiber &amp; Vitamins" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Dried Turkish Apricots (Pitted) - 1 KG | Premium, Plump &amp; Chewy | All-Natural, No Added Sugar | Rich in Fiber &amp; Vitamins</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹899</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=645.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564515574420250819231235.webp" class="productimage" alt="DRYNUTS Dried Kiwi Slices - 1 KG | Premium, Sweet &amp; Tangy | Rich in Vitamin C &amp; Fiber | Healthy Dehydrated Fruit Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Dried Kiwi Slices - 1 KG | Premium, Sweet &amp; Tangy | Rich in Vitamin C &amp; Fiber | Healthy Dehydrated Fruit Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹411</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹390</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=650.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564525384420250819231413.webp" class="productimage" alt="DRYNUTS Premium Dried Blueberries - 1 KG | Antioxidant-Rich Superfood | Sweet &amp; Juicy | All-Natural Healthy Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Dried Blueberries - 1 KG | Antioxidant-Rich Superfood | Sweet &amp; Juicy | All-Natural Healthy Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹899</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=655.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564535179520250819231551.webp" class="productimage" alt="DRYNUTS Premium Chia Seeds - 1 KG | All-Natural Superfood for Weight Management &amp; Energy | Rich in Omega-3, Fiber &amp; Protein" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium Chia Seeds - 1 KG | All-Natural Superfood for Weight Management &amp; Energy | Rich in Omega-3, Fiber &amp; Protein</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹393</span>
+                                <del class="mrp">₹1,699</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹373</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=660.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564543842020250819231718.webp" class="productimage" alt="DRYNUTS Premium California Walnut Kernels - 1 KG | Raw &amp; Natural Akhrot Giri | Rich in Omega-3 &amp; Antioxidants | Brain Superfood" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium California Walnut Kernels - 1 KG | Raw &amp; Natural Akhrot Giri | Rich in Omega-3 &amp; Antioxidants | Brain Superfood</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹379</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    83%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹360</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=665.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564553054520250819231850.webp" class="productimage" alt="DRYNUTS Premium California Pistachios - 1 KG | Roasted &amp; Salted, In-Shell Pista | Crunchy &amp; Healthy Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium California Pistachios - 1 KG | Roasted &amp; Salted, In-Shell Pista | Crunchy &amp; Healthy Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹391</span>
+                                <del class="mrp">₹1,399</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹371</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=670.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564564365320250819232043.webp" class="productimage" alt="DRYNUTS Premium California Almonds - 1 KG | Raw, Natural &amp; Crunchy Badam | Rich in Protein &amp; Vitamin E | Healthy Superfood Snack" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Premium California Almonds - 1 KG | Raw, Natural &amp; Crunchy Badam | Rich in Protein &amp; Vitamin E | Healthy Superfood Snack</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹1,499</del>
+                                <span class="discount">
+                                    97%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                            <a href="singlepageview@pid=675.html" class="products">
+                    <div class="productcard">
+                        <div class="imagecontainer">
+                            <img src="assets/uploads/uploads/175564573591820250819232215.webp" class="productimage" alt="DRYNUTS Jumbo Mamra Almonds - 1 KG | Premium &amp; Raw Mamra Badam | Rich in Healthy Oils &amp; Nutrients | The King of Almonds" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">DRYNUTS Jumbo Mamra Almonds - 1 KG | Premium &amp; Raw Mamra Badam | Rich in Healthy Oils &amp; Nutrients | The King of Almonds</p>
+                            <div class="price-line">
+                                <span class="selling-price">₹399</span>
+                                <del class="mrp">₹1,199</del>
+                                <span class="discount">
+                                    91%
+                                    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-arrow">
+                                        <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="wow-offer">
+                                <img class="wow-badge" src="assets/catogary/wow.webp" alt="WOW Offer"/> 
+                                <span class="wow-price">₹379</span>
+                                <span class="offer-text">with 2 offers</span>
+                            </div>
+                            <div class="rating-line">
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>                                </div>
+                                <img class="fassured-logo-small" src="assets/catogary/fa_62673a.png" alt="F-Assured"/>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                    </div>
+    </main>
+    
+   
+    <footer class="site-footer mt-2">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

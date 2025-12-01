@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Cart</title>
+</head>
+<body>
+    <h1>Clearing Cart...</h1>
+    <script>
+        localStorage.removeItem('shoppingCart');
+        localStorage.removeItem('orders');
+        alert('Cart cleared! Redirecting to homepage...');
+        window.location.href = 'index.html';
+    </script>
+</body>
+</html>
