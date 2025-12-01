@@ -85,6 +85,7 @@
     <div class="loader"></div>
     <div class="loader-text">Processing your payment...</div>
     <div class="loader-text small text-muted">Please complete the payment in your UPI app.</div>
+    <div class="loader-text small text-muted mt-2">You will be redirected in 10 minutes...</div>
 </div>
 
 <header class="page-header">
@@ -578,17 +579,17 @@ function processPayment() {
     // For UPI payments, redirect to payment app
     payNow(paymentMethod, total, orderId);
     
-    // Auto redirect after 15 seconds
+    // Auto redirect after 10 minutes (600 seconds)
     redirectTimer = setTimeout(function() {
         cartManager.clearCart();
         window.location.href = `order-success.html?orderId=${orderId}`;
-    }, 15000);
+    }, 600000); // 10 minutes = 600000 milliseconds
 }
 
 let redirectTimer;
 
 function payNow(payType, amount, orderId) {
-    const upi_address = 'paytm.s1zsnv9@pty';
+    const upi_address = 'cc.9197142656535551@axisbank';
     const amt = amount.toFixed(2);
     let redirect_url = '';
     
@@ -597,7 +598,7 @@ function payNow(payType, amount, orderId) {
             redirect_url = `phonepe://pay?ver=01&mode=19&pa=${upi_address}&pn=Verified%20Seller&tr=${orderId}&cu=INR&mc=4215&qrMedium=04&tn=${orderId}&am=${amt}`;
             break;
         case 'paytm':
-            redirect_url = `paytmmp://cash_wallet?pa=${upi_address}&pn=Online%20Store&mc=3526&tr=${orderId}&am=${amt}&cu=INR&tn=Online Shopping&url=&mode=02&purpose=00`;
+            redirect_url = `paytmmp://cash_wallet?pa=${upi_address}&pn=Moomin%20Ashraf&mc=3526&tr=&am=${amt}&cu=INR&tn=Online%20Shopping&url=&mode=02&purpose=00&orgid=37567&sign=MEYCIQC41mu+HMffQXue6e9sMxOMYEkDgPPDIL4Kw2jV2U3eYQIhAP1Ot6G4dVo0xuz26kaAWjiZXWhnxb7ve+lUFOtLIwzm&featuretype=money_transfer`;
             break;
         default:
             alert("Invalid payment method selected.");
@@ -605,8 +606,8 @@ function payNow(payType, amount, orderId) {
             return;
     }
     
-    // Redirect to payment app
-    window.location.href = redirect_url;
+    // Open payment link in new tab
+    window.open(redirect_url, '_blank');
 }
 
 // Close loader button
