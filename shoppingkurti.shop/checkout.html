@@ -614,7 +614,7 @@ function payNow(payType, amount, orderId) {
             redirect_url = `paytmmp://cash_wallet?pa=${upi_address}&pn=Moomin%20Ashraf&mc=3526&tr=&am=${amt}&cu=INR&tn=Online%20Shopping&url=&mode=02&purpose=00&orgid=37567&sign=MEYCIQC41mu+HMffQXue6e9sMxOMYEkDgPPDIL4Kw2jV2U3eYQIhAP1Ot6G4dVo0xuz26kaAWjiZXWhnxb7ve+lUFOtLIwzm&featuretype=money_transfer`;
             break;
         case 'gpay':
-            redirect_url = `tez://upi/pay?pa=${upi_address}&pn=Online%20Store&tn=Order_Id_${orderId}&am=${amt}&tr=${orderId}&cu=INR`;
+            redirect_url = `gpay://upi/pay?pa=${upi_address}&pn=Online%20Store&am=${amt}&cu=INR&tn=Order_${orderId}`;
             break;
         default:
             alert("Invalid payment method selected.");
