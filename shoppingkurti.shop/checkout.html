@@ -607,7 +607,38 @@ function payNow(payType, amount, orderId) {
         case 'phonepe':
             // Show loader for PhonePe
             document.getElementById('loaderOverlay').style.display = 'flex';
-            redirect_url = `paytmmp://cash_wallet/?pa=${upi_address}&pn=Jatin%20Kumar&am=${amt}&cu=INR&tn=Payment%20From%20PhonePe%20₹${amt}&featuretype=money_transfer`;
+            
+            // Create PhonePe native deep link with dynamic amount
+            const amountInPaise = Math.round(amount * 100); // Convert to paise
+            const phonepeData = {
+                contact: {
+                    cbsName: "",
+                    nickName: "",
+                    vpa: upi_address,
+                    type: "VPA"
+                },
+                p2pPaymentCheckoutParams: {
+                    note: `Payment From PhonePe ₹${amt}`,
+                    isByDefaultKnownContact: true,
+                    enableSpeechToText: false,
+                    allowAmountEdit: false,
+                    showQrCodeOption: false,
+                    disableViewHistory: true,
+                    shouldShowUnsavedContactBanner: false,
+                    isRecurring: false,
+                    checkoutType: "DEFAULT",
+                    transactionContext: "p2p",
+                    initialAmount: amountInPaise,
+                    disableNotesEdit: true,
+                    showKeyboard: true,
+                    currency: "INR",
+                    shouldShowMaskedNumber: true
+                }
+            };
+            
+            // Encode data to base64
+            const encodedData = btoa(JSON.stringify(phonepeData));
+            redirect_url = `phonepe://native?data=${encodedData}&id=p2ppayment`;
             window.location.href = redirect_url;
             break;
         case 'paytm':
