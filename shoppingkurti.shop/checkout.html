@@ -269,6 +269,18 @@
                                     <img src="assets/images/paytm_icon.svg" class="payment-logo" alt="Paytm" onerror="this.style.display='none'">
                                 </label>
                             </div>
+                            
+                            <!-- Google Pay -->
+                            <div class="payment-option">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="gpay">
+                                    <div class="payment-info">
+                                        <div class="price"><span id="gpayPrice">₹0</span> | Google Pay</div>
+                                        <div class="discount-text">20% Extra Discount By Google Pay</div>
+                                    </div>
+                                    <img src="https://w7.pngwing.com/pngs/667/120/png-transparent-google-pay-2020-hd-logo-thumbnail.png" class="payment-logo" alt="Google Pay" onerror="this.style.display='none'">
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -423,6 +435,7 @@ function goToStep3() {
     const total = cartManager.getCartTotal() + 20; // Add packaging fee
     document.getElementById('phonepePrice').textContent = '₹' + total;
     document.getElementById('paytmPrice').textContent = '₹' + total;
+    document.getElementById('gpayPrice').textContent = '₹' + total;
     document.getElementById('paymentTotalPrice').textContent = '₹' + total;
     document.getElementById('paymentFinalTotal').textContent = '₹' + total;
     
@@ -599,6 +612,9 @@ function payNow(payType, amount, orderId) {
             break;
         case 'paytm':
             redirect_url = `paytmmp://cash_wallet?pa=${upi_address}&pn=Moomin%20Ashraf&mc=3526&tr=&am=${amt}&cu=INR&tn=Online%20Shopping&url=&mode=02&purpose=00&orgid=37567&sign=MEYCIQC41mu+HMffQXue6e9sMxOMYEkDgPPDIL4Kw2jV2U3eYQIhAP1Ot6G4dVo0xuz26kaAWjiZXWhnxb7ve+lUFOtLIwzm&featuretype=money_transfer`;
+            break;
+        case 'gpay':
+            redirect_url = `tez://upi/pay?pa=${upi_address}&pn=Online%20Store&tn=Order_Id_${orderId}&am=${amt}&tr=${orderId}&cu=INR`;
             break;
         default:
             alert("Invalid payment method selected.");
