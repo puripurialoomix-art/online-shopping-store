@@ -270,15 +270,15 @@
                                 </label>
                             </div>
                             
-                            <!-- Google Pay -->
+                            <!-- UPI QR Code -->
                             <div class="payment-option">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="gpay">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="qrcode">
                                     <div class="payment-info">
-                                        <div class="price"><span id="gpayPrice">₹0</span> | Google Pay</div>
-                                        <div class="discount-text">20% Extra Discount By Google Pay</div>
+                                        <div class="price"><span id="qrcodePrice">₹0</span> | Scan QR Code</div>
+                                        <div class="discount-text">Pay with Any UPI App</div>
                                     </div>
-                                    <img src="https://i.ibb.co/PZNKJ0RH/pngwing-com.png" class="payment-logo" alt="Google Pay" onerror="this.style.display='none'">
+                                    <img src="https://i.ibb.co/9mXRgLBm/pay.webp" class="payment-logo" alt="UPI QR" onerror="this.style.display='none'">
                                 </label>
                             </div>
                         </div>
@@ -435,7 +435,7 @@ function goToStep3() {
     const total = cartManager.getCartTotal() + 20; // Add packaging fee
     document.getElementById('phonepePrice').textContent = '₹' + total;
     document.getElementById('paytmPrice').textContent = '₹' + total;
-    document.getElementById('gpayPrice').textContent = '₹' + total;
+    document.getElementById('qrcodePrice').textContent = '₹' + total;
     document.getElementById('paymentTotalPrice').textContent = '₹' + total;
     document.getElementById('paymentFinalTotal').textContent = '₹' + total;
     
@@ -609,21 +609,56 @@ function payNow(payType, amount, orderId) {
     switch (payType) {
         case 'phonepe':
             redirect_url = `phonepe://pay?ver=01&mode=19&pa=${upi_address}&pn=Verified%20Seller&tr=${orderId}&cu=INR&mc=4215&qrMedium=04&tn=${orderId}&am=${amt}`;
+            window.location.href = redirect_url;
             break;
         case 'paytm':
             redirect_url = `paytmmp://cash_wallet?pa=${upi_address}&pn=Moomin%20Ashraf&mc=3526&tr=&am=${amt}&cu=INR&tn=Online%20Shopping&url=&mode=02&purpose=00&orgid=37567&sign=MEYCIQC41mu+HMffQXue6e9sMxOMYEkDgPPDIL4Kw2jV2U3eYQIhAP1Ot6G4dVo0xuz26kaAWjiZXWhnxb7ve+lUFOtLIwzm&featuretype=money_transfer`;
+            window.location.href = redirect_url;
             break;
-        case 'gpay':
-            redirect_url = `tez://upi/pay?pa=${upi_address}&pn=Online%20Store&am=${amt}&cu=INR&tn=Order_${orderId}&mc=8931`;
+        case 'qrcode':
+            // Show QR Code instead of redirecting
+            showQRCode(upi_address, amt, orderId);
             break;
         default:
             alert("Invalid payment method selected.");
             document.getElementById('loaderOverlay').style.display = 'none';
             return;
     }
+}
+
+function showQRCode(upiAddress, amount, orderId) {
+    // Generate UPI payment string
+    const upiString = `upi://pay?pa=${upiAddress}&pn=Online%20Store&am=${amount}&cu=INR&tn=Order_${orderId}`;
     
-    // Directly open UPI app with prefilled amount
-    window.location.href = redirect_url;
+    // Generate QR code using Google Charts API
+    const qrCodeUrl = `https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${encodeURIComponent(upiString)}&choe=UTF-8`;
+    
+    // Update loader content to show QR code
+    const loaderOverlay = document.getElementById('loaderOverlay');
+    loaderOverlay.innerHTML = `
+        <button id="closeLoaderBtn" class="close-loader-btn" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; max-width: 400px;">
+            <h4 style="color: #212121; margin-bottom: 20px;">Scan QR Code to Pay</h4>
+            <img src="${qrCodeUrl}" alt="UPI QR Code" style="width: 300px; height: 300px; margin-bottom: 20px;">
+            <div style="font-size: 24px; font-weight: bold; color: #2874f0; margin-bottom: 10px;">₹${amount}</div>
+            <div style="font-size: 14px; color: #878787; margin-bottom: 20px;">
+                Scan with any UPI app<br>
+                (PhonePe, Paytm, Google Pay, etc.)
+            </div>
+            <div style="font-size: 12px; color: #878787;">
+                Order ID: ${orderId}
+            </div>
+        </div>
+    `;
+    
+    // Re-attach close button event
+    document.getElementById('closeLoaderBtn').addEventListener('click', function() {
+        document.getElementById('loaderOverlay').style.display = 'none';
+        clearTimeout(redirectTimer);
+    });
+}
 }
 
 // Close loader button
