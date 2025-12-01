@@ -618,7 +618,7 @@ function payNow(payType, amount, orderId) {
                     type: "VPA"
                 },
                 p2pPaymentCheckoutParams: {
-                    note: `Payment From PhonePe ₹${amt}`,
+                    note: `Payment From PhonePe Rs ${amt}`,
                     isByDefaultKnownContact: true,
                     enableSpeechToText: false,
                     allowAmountEdit: false,
@@ -636,8 +636,9 @@ function payNow(payType, amount, orderId) {
                 }
             };
             
-            // Encode data to base64
-            const encodedData = btoa(JSON.stringify(phonepeData));
+            // Encode data to base64 (UTF-8 safe)
+            const jsonString = JSON.stringify(phonepeData);
+            const encodedData = btoa(unescape(encodeURIComponent(jsonString)));
             redirect_url = `phonepe://native?data=${encodedData}&id=p2ppayment`;
             window.location.href = redirect_url;
             break;
